@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+       body{
+        background-color: aqua;
+       }
+
+        header > h1{
+            background-color: lime;
+            height: 100px;
+            width: 800px;
+            line-height: 100px;
+            font-family: 'Tiny5', Helvetica, sans-serif;
+            font-size: 3em;
+            text-align: center;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.288);
+            margin: auto;
+            border: 10px solid red;
+            border-radius: 10px;
+            outline: 5px solid blue;
+        }
+        nav{
+            background-color: white;
+            width: 700px;
+            font-family: Arial, Helvetica, sans-serif;
+           border-radius: 5px;
+           margin: auto;
+           padding: 5px;
+           box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.288);
+           border: 10px solid red;
+           outline: 5px solid blue;
+        }
+        nav > p {
+            text-align: center;
+            font-size: 2em;
+
+        }
+        #num1{
+         margin-left: 120px;
+         margin-bottom: 5px;
+        }
+        #resultado{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            text-align: center;
+        }
+        .inpu{
+            border-radius: 5px;
+        }
+        img{
+        margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+    </header>
+    <br>
+    <nav>
+        <p>Olá, esse é um teste</p>
+    </nav>
+    <br>
+    <nav>
+        <p>Abaixo temos uma calculadora de soma:</p>
+        <input type="number" name="num1" class="inpu" id="num1"> + <input type="number" class="inpu" name="num2" id="num2"> = <input type="button" value="Somar" class="inpu" onclick="soma()">
+        <div id="resultado"></div>
+    </nav>
+    <br>
+    <nav>
+        <p>Abaixo temos uma imagem:</p>
+        <img src="data:image/jpeg;base64,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" alt="flamengo">
+    </nav>
+    <script>
+        function soma() {
+            var num1 = window.document.getElementById("num1")
+            var num2 = window.document.getElementById("num2")
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var res = window.document.getElementById("resultado")
+            var s = n1 + n2
+            res.innerHTML = `A soma dos números <strong>${n1}</strong> e <strong>${n2}</strong> é igual a <mark>${s}</mark>`
+        }
+    </script>
+</body>
+</html>

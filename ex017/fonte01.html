@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+</head>
+<style>
+    body{
+        font-family: 'Work Sans',Arial, Helvetica, sans-serif; /*Nessa linha, o site tentará primeiro a fonte Arial, se a fonte Arial não for compativel ou não tiver no navegador que o cliente vai acessar, ele vai tentar a fonte Helvetica, se não for possivel ele vai tentar a sans-serif*/
+
+        /*
+        Medidas absolutas : cm, mm, in (polegadas), px, pt, pc
+        
+        Medidas relativas: em, ex, rem, vw, vh, %
+
+        16px gerlamente é igual a 1em
+        */
+        font-size: 1em ;
+        font-weight: lighter;
+        /*lighter normal bold bolder <-- Essas são as medidas de peso que nós temos. Podemos classificar eles numericamente de 100 a 900 (SE FOR USAR NUMERICAMENTE SEMPRE USE DE 100 EM 100. EX: 100, 200, 300, 400, 500, 600, 700, 800, 900) NÃO SAO TODAS AS FONTE QUE ACEITAM USAR TODOS OS ELEMENTOS CITADOS.*/
+        font-style: italic;
+        text-decoration: underline;
+    }
+    h1{
+        font-family: 'work Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 3em;
+        font-style: italic; 
+        /*Esse codigo é muito feito no dia a dia, vamos aprender a fazer ele de uma forma que fique em uma linha só, quando simplificamos alguma coisa assim , é chamada de shorthand, utilizaremos somente a tag font
+        
+        Ordem em que devemos configurar na shorhand:
+        - font-style --> font-weight --> font-size --> font-family 
+        */
+        font: italic bolder 3em 'work Sans', sans-serif;
+    }
+    h2{
+        font: bold 2em 'work Sans';
+    }
+</style>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate natus dolorum minima. Obcaecati accusantium dolorem doloremque iure nisi quaerat placeat maxime, ad, architecto suscipit, hic dolore voluptatem officia velit a? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque in accusamus harum. Dolore delectus ipsa enim totam. Culpa iusto possimus modi esse reiciendis, assumenda nisi et voluptatem, laboriosam nihil saepe?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque omnis at debitis rerum iusto quod ipsam enim ipsum tempore incidunt, porro facere modi tempora possimus quaerat ratione amet corrupti impedit!</p>
+<h2>Subtítulo do exercício</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni autem quod voluptatum nisi pariatur quasi doloribus quam, nam alias aspernatur reprehenderit labore, ad qui vel laudantium sequi quos praesentium sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem mollitia dolorem eum, et earum ex ducimus adipisci alias rem repudiandae voluptatibus aliquid pariatur perferendis repellendus blanditiis quaerat accusamus id optio.</p>
+
+</body>
+</html>
