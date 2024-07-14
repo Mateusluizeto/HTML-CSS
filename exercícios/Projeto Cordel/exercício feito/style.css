@@ -51,7 +51,7 @@ p{
     font-family: var(--fonte3);
 }
 #back1{
-    background-image: url('imagens/background001.jpg');
+    background-image: url("../imagens/background001.jpg");
     height: 800px;
     background-position: center center;
     background-attachment: fixed;
@@ -64,7 +64,7 @@ div > article{
     color: white;
 }
 #back2{
-    background-image: url('imagens/background002.jpg');
+    background-image: url('../imagens/background002.jpg');
     height: 800px;
     background-position: center center;
     background-attachment: fixed;
