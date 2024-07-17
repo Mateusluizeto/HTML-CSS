@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
         }
-    
-        table{
+
+        table {
             width: 500px;
             border-collapse: collapse;
         }
 
-        td, th {
-            border: 1px solid black; 
-            padding: 10px;  
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
-        thead, tfoot{
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /*
+        No lugar do 2n podemos usar even(par) ou odd(ímpar), que ai todos os elementos pares,por exemplo, vão ficar com a configuração definida
+        */
+        tbody > tr:nth-child(2n){ /*Pseudo classe para reptir a configuração abaixo de 2 em 2 vezes, nesse caso*/
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
             background-color: gray;
             color: white;
         }
-        td.num{
+
+        td.num {
             text-align: right;
         }
     </style>
     <title>Tabelas</title>
 </head>
+
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES:
+        CAPTION (Caption é um titulo para sua tabela ou até mesmo uma legenda)
         TABLE
             THEAD
                 TR, TD, TH
@@ -42,9 +61,10 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </thead>
         <tbody>
             <tr>
@@ -158,10 +178,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>206.426.692</strong></td>
             </tr>
         </tfoot>
     </table>
 </body>
+
 </html>
