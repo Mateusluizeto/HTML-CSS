@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -21,12 +22,16 @@
             background-color: lightgray;
         }
 
-        td,
-        th {
+        td,th {
             border: 1px solid black;
             padding: 10px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
         /*
         No lugar do 2n podemos usar even(par) ou odd(ímpar), que ai todos os elementos pares,por exemplo, vão ficar com a configuração definida
         */
