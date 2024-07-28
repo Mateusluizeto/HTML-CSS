@@ -2,6 +2,73 @@
 
 /*Todas as demais mídias*/
 
-@media print{
+/*Typical Divice Breakpoints
+Pequenas telas: até 600px
+Celular: 600px até 768px
+Tablet:  768px até 992px
+Desktop: 992px até 1200px
+Telas Grandes: acima de 1200px
+*/
+
+@media print{ /*INPRESSÃO*/
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main{
+        border: 2px solid black;
+    }
+
+    body{
+        background-image: url('../imagens/back-print.jpg'); /*Desnecessário pois não aparece background no papel*/
+    }
+
+    main > h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: block;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+
+/*Não teremos configurações para telas pequenas e celular, pois ela já foi feita na configuração geral, seguimos o mobile first*/
+
+@media screen and (min-width: 768px) and (max-width: 992px){ /*TABLET*/
+    body{
+        background-image: url('../imagens/back-tablet.jpg');
+    }
     
+        img#phone{display: none;}
+        img#tablet{display: block;}
+        img#print{display: none;}
+        img#pc{display: none;}
+        img#tv{display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /*DESKTOP*/
+ body{
+    background-image: url('../imagens/back-pc.jpg');
+ }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: block;}
+    img#tv{display: none;}
+}
+
+@media screen and (min-width: 1200px) { /*TELAS GRANDES*/
+    body{
+        background-image: url('../imagens/back-tv.jpg');
+    }
+
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;}
 }
