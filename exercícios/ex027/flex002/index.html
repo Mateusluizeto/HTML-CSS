@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-direction: column; /*Os elementos filhos vão ficar empilhados de cima para baixo*/
+            /*flex-direction: row; Os elementos filhos vão ficar da esquerda para a direita (esse é o padrão)
+              flex-direction: row-reverse; Os elementos vão ficar da direita para a esquerda
+              flex-direction: column; Os elementos vão ficar empilhados um em cima do outro, de cima para baixo(como está no código)
+              flex-direction: column-reverse; Os elementos vão ficar empilhados um em cima do outro, de baixo para cima
+            */
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Este é o elemento pai-->
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+
+</html>
