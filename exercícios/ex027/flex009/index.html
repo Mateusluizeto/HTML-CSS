@@ -7,35 +7,29 @@
     <style>
         div.conteiner{
             background-color: lightsalmon;
-            height: 400px;
-          
+
             display: flex;
-            flex-flow: row wrap; 
-            align-content: space-evenly; /*O modo que ele vai ficar quando quebrar*/
-           
+            flex-flow: row wrap;
         }
         div.item{
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            padding: 40px;
+            flex-basis: 150px;
+            
+           
         }
     </style>
 </head>
 <body>
     <div class="conteiner"> <!--Este é o elemento pai-->
         <div class="item">A</div>
-        <div class="item">B</div>
+        <div class="item">Outro conteúdo</div>
         <div class="item">C</div>
-        <div class="item">D</div>
+        <div class="item">Conteúdo um pouco maior</div>
         <div class="item">E</div>
-        <div class="item">F</div>
+        <div class="item">Conteúdo maior ainda, que vai ocupar mais espaço.</div>
         <div class="item">G</div>
-        <div class="item">H</div>
-        <div class="item">I</div>
-        <div class="item">J</div>
-        <div class="item">K</div>
-        <div class="item">L</div>
     </div>
 </body>
 

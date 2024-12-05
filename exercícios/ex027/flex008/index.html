@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+            height: 400px;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            
+            padding: 20px;
+        }
+
+        #letraA{
+            align-self: inherit;
+        }
+
+        #letraB{
+            align-self: auto; /*Vai herdar a propriedade do pai, sendo ela o (align-items: flex-start;) fazendo assim ele ficar colado no cross-start, podemos usar o inherit que serve para herdar a propeirdade do pai, mas o recomendado é udar o auto */
+        }
+        #letraC{
+            align-self: flex-end; /*Vai fazer com que o elemento C fique grudado no cross-end*/
+        }
+        #letraD{
+            align-self: stretch;
+        }
+        #letraE{
+            align-self: center; /*Vai fazer com que o elemento C fique no centro em relação ao cross-axis*/
+        }
+        #letraF{
+            align-self: flex-start;
+        }
+        #letraG{
+            align-self: stretch; /*Vai fazer com que o elemento G fique esticado pelo cross-axis todo*/
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Este é o elemento pai-->
+        <div class="item" id="letraA">A</div>
+        <div class="item" id="letraB">B</div>
+        <div class="item" id="letraC">C</div>
+        <div class="item" id="letraD">D</div>
+        <div class="item" id="letraE">E</div>
+        <div class="item" id="letraF">F</div>
+        <div class="item" id="letraG">G</div>
+    </div>
+</body>
+
+</html>
