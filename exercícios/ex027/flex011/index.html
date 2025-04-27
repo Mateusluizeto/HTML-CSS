@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 200px;
+            
+        }
+
+        div#cxA{
+            flex-shrink: 1;   
+            flex-grow: 0; 
+        }
+
+        div#cxB{
+            flex-shrink: 1;
+            flex-grow: 2;
+        }
+
+        div#cxC{
+            flex-shrink: 1;
+            flex-grow: 4; /*Esse elemento vai crescer o dobro do elemento B (2 e 4 é mesma coisa que 1 e 2)*/
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Este é o elemento pai-->
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+</body>
+
+</html>
